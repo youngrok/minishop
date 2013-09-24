@@ -12,6 +12,10 @@
 			<a href="/favorite/{{product.id}}" class="btn btn-primary">Favorite</a>
 		</div>	
 
+		<h3>Comments</h3>
+		{% for comment in product.comment_set.all %}
+			<li><span class="label label-success">{{comment.user.username}}</span> {{comment.content}}</li>
+		{% endfor %}
 		<form class="form" action="/comment/create" method="post">
 			<div class="form-group">
 				<input class="form-control" type="hidden" name="csrfmiddlewaretoken" value="{{csrf_token}}">
