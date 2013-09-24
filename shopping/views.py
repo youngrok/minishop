@@ -18,6 +18,10 @@ def favorite(request, resource_id):
 	product = Product.objects.get(id=resource_id)
 	Favorite.objects.get_or_create(user=request.user, product=product)
 	return HttpResponseRedirect('/favorites')
+
+def favorites(request):
+	favorites = Favorite.objects.filter(user=request.user)
+	return render_to_response('favorites.html', locals())
 	
 def login(request):
 	return render_to_response('login.html', locals(), RequestContext(request))
