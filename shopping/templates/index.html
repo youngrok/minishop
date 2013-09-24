@@ -1,27 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>MiniShop</title>
-<link rel="stylesheet" type="text/css" href="/static/bootstrap.css">
-<style type="text/css">
-	.product {float: left; width: 240px; padding: 10px; }
-	.product img {width: 200px; }
-	.product h5 { height: 20px;}
-</style>
-</head>
+{% extends 'layout.html' %}
+{% block content %}
+	<style type="text/css">
+		.product {float: left; width: 240px; padding: 10px; }
+		.product img {width: 200px; }
+		.product h5 { height: 20px;}
+	</style>
 
-<body>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">MiniShop</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li><a href="/">Featured</a></li>
-          <li><a href="/">Favorites</a></li>
-        </ul>
-    </nav> 
-
-	<div class="container">
 	{% for product in products %}
 		<div class="product">
 			<a href="/product/{{product.id}}">
@@ -31,8 +15,4 @@
 			<div>${{product.price}}</div>
 		</div>
 	{% endfor %}		
-	</div>
-
-</body>
-</html>
-
+{% endblock %}
