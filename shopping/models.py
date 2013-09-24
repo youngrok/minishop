@@ -12,3 +12,9 @@ class Favorite(models.Model):
 	user = models.ForeignKey(User)
 	product = models.ForeignKey(Product)
 	created = models.DateTimeField(auto_now_add=True)
+
+class Comment(models.Model):
+	user = models.ForeignKey(User)
+	product = models.ForeignKey(Product)
+	content = models.TextField()
+	created = models.DateTimeField(auto_now_add=True)

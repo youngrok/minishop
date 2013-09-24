@@ -12,7 +12,7 @@ urlpatterns = patterns('',
 	url(r'accounts/login', 'shopping.views.login'),	
 	url(r'accounts/authenticate', 'shopping.views.authenticate'),	
 	url(r'accounts/logout', 'shopping.views.logout'),	
-	
+	url(r'comment/create', 'shopping.views.comment'),
     # Examples:
     # url(r'^$', 'minishop.views.home', name='home'),
     # url(r'^minishop/', include('minishop.foo.urls')),
