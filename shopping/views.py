@@ -26,7 +26,7 @@ def authenticate(request):
 		return HttpResponse('username or password error')
 
 	auth.login(request, user)
-	return HttpResponseRedirect('/')
+	return HttpResponseRedirect(request.POST.get('next', '/') or '/')
 
 def logout(request):
 	auth.logout(request)
