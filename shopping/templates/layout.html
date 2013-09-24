@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>minishop</title>
+		<link rel="stylesheet" type="text/css" href="/static/bootstrap.css">
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+		    <div class="navbar-header">
+		        <a class="navbar-brand" href="/">MiniShop</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		    	<li><a href="/">Featured</a></li>
+		    	<li><a href="/favorites">Favorites</a></li>
+		   	</ul>
+		</nav>
+
+		<div class="container">
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>
