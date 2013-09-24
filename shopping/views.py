@@ -14,3 +14,6 @@ def show(request, resource_id):
 @login_required
 def favorite(request, resource_id):
 	return HttpResponse('favorite %s' % resource_id)
+
+def login(request):
+	return render_to_response('login.html', locals())
