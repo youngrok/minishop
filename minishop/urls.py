@@ -10,6 +10,7 @@ urlpatterns = patterns('',
 	url(r'favorite/(?P<resource_id>\d+)', 'shopping.views.favorite'),
 	url(r'accounts/login', 'shopping.views.login'),	
 	url(r'accounts/authenticate', 'shopping.views.authenticate'),	
+	url(r'accounts/logout', 'shopping.views.logout'),	
 	
     # Examples:
     # url(r'^$', 'minishop.views.home', name='home'),

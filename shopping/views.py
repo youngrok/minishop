@@ -27,3 +27,7 @@ def authenticate(request):
 
 	auth.login(request, user)
 	return HttpResponseRedirect('/')
+
+def logout(request):
+	auth.logout(request)
+	return HttpResponseRedirect('/')	
