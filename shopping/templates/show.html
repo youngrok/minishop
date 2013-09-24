@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>MiniShop</title>
-<link rel="stylesheet" type="text/css" href="/static/bootstrap.css">
-</head>
-
-<body>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">MiniShop</a>
-        </div>
-        <ul class="nav navbar-nav">
-          <li><a href="/">Featured</a></li>
-          <li><a href="/">Favorites</a></li>
-        </ul>
-    </nav> 
-
-	<div class="container">
-
+{% extends 'layout.html' %}
+{% block content %}
 		<div class="product">
 			<a href="/product/{{product.id}}">
 				<img src="{{product.image}}">
@@ -29,7 +11,4 @@
 		<div>
 			<a href="/favorite/{{product.id}}" class="btn btn-primary">Favorite</a>
 		</div>	
-	</div>
-
-</body>
-</html>
+{% endblock %}
