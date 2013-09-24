@@ -6,9 +6,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
 	url(r'^$', 'shopping.views.index'),
-	url(r'product/(?P<resource_id>\d+)', 'shopping.views.show'),
-	url(r'favorite/(?P<resource_id>\d+)', 'shopping.views.favorite'),
-	url(r'favorites', 'shopping.views.favorites'),
+	url(r'^product/(?P<resource_id>\d+)', 'shopping.views.show'),
+	url(r'^favorite/(?P<resource_id>\d+)', 'shopping.views.favorite'),
+	url(r'^favorites', 'shopping.views.favorites'),
 	url(r'accounts/login', 'shopping.views.login'),	
 	url(r'accounts/authenticate', 'shopping.views.authenticate'),	
 	url(r'accounts/logout', 'shopping.views.logout'),	
