@@ -11,4 +11,15 @@
 		<div>
 			<a href="/favorite/{{product.id}}" class="btn btn-primary">Favorite</a>
 		</div>	
+
+		<form class="form" action="/comment/create" method="post">
+			<div class="form-group">
+				<input class="form-control" type="hidden" name="csrfmiddlewaretoken" value="{{csrf_token}}">
+			</div>
+			<div class="form-group">
+				<input type="hidden" name="product" value="{{product.id}}">
+				<textarea class="form-control" name="comment"></textarea>
+			</div>
+			<input type="submit" class="btn btn-info" value="Write comment">
+		</form>		
 {% endblock %}
